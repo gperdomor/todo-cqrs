@@ -32,6 +32,10 @@ export class ConfigService {
     };
   }
 
+  get isProduction(): boolean {
+    return this.config.NODE_ENV === 'production';
+  }
+
   get server(): ServerConfig {
     return this.config.server;
   }
